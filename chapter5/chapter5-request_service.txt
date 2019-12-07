@@ -1,0 +1,50 @@
+########## Web Map Service (WMS) ##########
+#GetCapabilities
+http://localhost:8080/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities
+
+#GetMap
+http://localhost:8080/geoserver/ows?request=GetMap&service=WMS&version=1.1.1&layers=topp%3Astates&styles=population&srs=EPSG%3A4326&bbox=-145.15104058007,21.731919794922,-57.154894212888,58.961058642578&width=780&height=330&format=image%2Fpng
+http://localhost:8080/geoserver/ows?request=GetMap&service=WMS&version=1.1.1&layers=topp%3Astates&styles=pophatch&srs=EPSG%3A4326&bbox=-145.15104058007,21.731919794922,-57.154894212888,58.961058642578&width=780&height=330&format=image%2Fpng
+
+#GetMap and CQL FILTER
+http://localhost:8080/geoserver/ows?request=GetMap&service=WMS&version=1.1.1&layers=topp%3Astates&styles=population&srs=EPSG%3A4326&bbox=-145.15104058007,21.731919794922,-57.154894212888,58.961058642578&width=780&height=330&format=image%2Fpng&&cql_filter=PERSONS > 15000000
+
+#GetFeatureInfo
+http://localhost:8080/geoserver/ows?request=GetFeatureInfo&service=WMS&version=1.1.1&layers=topp%3Astates&srs=EPSG%3A4326&format=image%2Fpng&bbox=-145.15104058007,21.731919794922,-57.154894212888,58.961058642578&width=780&height=330&query_layers=topp%3Astates&info_format=text%2Fhtml&x=230&y=195
+http://localhost:8080/geoserver/ows?request=GetFeatureInfo&service=WMS&version=1.1.1&layers=topp%3Astates&srs=EPSG%3A4326&format=image%2Fpng&bbox=-145.15104058007,21.731919794922,-57.154894212888,58.961058642578&width=780&height=330&query_layers=topp%3Astates&info_format=text%2Fplain&x=550&y=160
+
+#DescribeLayer
+http://localhost:8080/geoserver/ows?service=WMS&version=1.1.1&request=DescribeLayer&layers=sf:sfdem,topp:tasmania_roads,nurc:mosaic,topp:states&outputFormat=text/xml
+
+#GetLegendGraphic
+http://localhost:8080/geoserver/ows?service=WMS&REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=40&HEIGHT=40&LAYER=topp:states
+http://localhost:8080/geoserver/ows?service=WMS&REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=40&HEIGHT=40&LAYER=sf:sfdem
+
+########## Web Feature Service (WFS) ##########
+#GetCapabilities
+http://localhost:8080/geoserver/ows?service=wfs&version=1.1.0&request=GetCapabilities
+
+#DescribeFeatureType
+http://localhost:8080/geoserver/ows?service=wfs&version=2.0.0&request=DescribeFeatureType&outputFormat=text/xml; subtype=gml/3.2&typeName=topp:states,topp:tasmania_cities
+
+#GetFeature
+http://localhost:8080/geoserver/ows?service=wfs&version=2.0.0&request=GetFeature&typeNames=topp:states&featureID=states.1
+http://localhost:8080/geoserver/ows?service=wfs&version=2.0.0&request=GetFeature&typeNames=topp:states&count=5
+
+
+########## Google Earth ##########
+
+http://localhost:8080/geoserver/topp/wms/kml?layers=topp:states
+
+http://localhost:8080/geoserver/topp/wms/kml?layers=topp:states&legend=true
+
+http://localhost:8080/geoserver/topp/wms/kml?layers=topp:states&legend=true&cql_filter=MALE > FEMALE
+
+
+########## Google Earth NEW ##########
+
+http://localhost:8080/geoserver/gisdata/wms/kml?layers=gisdata:raintam2555
+
+http://localhost:8080/geoserver/gisdata/wms/kml?layers=gisdata:raintam2555&legend=true
+
+http://localhost:8080/geoserver/gisdata/wms/kml?layers=gisdata:raintam2555&legend=true&cql_filter=rain>1600

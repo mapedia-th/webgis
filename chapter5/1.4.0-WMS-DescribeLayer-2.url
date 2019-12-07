@@ -1,0 +1,6 @@
+[InternetShortcut]
+URL=http://localhost:8080/geoserver/ows?service=WMS&version=1.1.1&request=DescribeLayer&layers=gisdata:S2B_MSIL1C_20181106_RGB,gisdata:amphoe,gisdata:ways,gisdata:hospital,gisdata:ALOS_PALSAR_DEM&outputFormat=text/xml
+IDList=
+HotKey=0
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2

@@ -1,0 +1,2 @@
+[InternetShortcut]
+URL=http://localhost:8080/geoserver/ows?request=GetMap&service=WMS&version=1.1.1&layers=topp%3Astates&styles=population&srs=EPSG%3A4326&bbox=-145.15104058007,21.731919794922,-57.154894212888,58.961058642578&width=780&height=330&format=image%2Fpng

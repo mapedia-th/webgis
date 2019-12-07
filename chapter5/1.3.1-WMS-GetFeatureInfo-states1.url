@@ -1,0 +1,2 @@
+[InternetShortcut]
+URL=http://localhost:8080/geoserver/ows?request=GetFeatureInfo&service=WMS&version=1.1.1&layers=topp%3Astates&srs=EPSG%3A4326&format=image%2Fpng&bbox=-145.15104058007,21.731919794922,-57.154894212888,58.961058642578&width=780&height=330&query_layers=topp%3Astates&info_format=text%2Fhtml&x=230&y=195

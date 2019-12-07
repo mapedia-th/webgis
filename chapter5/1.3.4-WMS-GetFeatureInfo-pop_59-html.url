@@ -1,0 +1,6 @@
+[InternetShortcut]
+URL=http://localhost:8080/geoserver/ows?request=GetFeatureInfo&service=WMS&version=1.1.1&layers=gisdata:pop_59&srs=EPSG%3A4326&format=image%2Fpng&bbox=99.8533977424378,16.3204288377173,101.109979865097,17.7430162498549&width=678&height=768&query_layers=gisdata:pop_59&info_format=text%2Fhtml&x=220&y=500
+IDList=
+HotKey=0
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2

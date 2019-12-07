@@ -1,0 +1,2 @@
+[InternetShortcut]
+URL=http://localhost:8080/geoserver/gistnu/wms?service=WMS&version=1.1.0&request=GetMap&layers=gistnu:pop_59&styles=&bbox=99.8533977424378,16.3204288377173,101.109979865097,17.7430162498549&width=678&height=768&srs=EPSG:4326&format=image/png
