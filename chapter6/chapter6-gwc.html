@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>GeoWebCache Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="http://dev.openlayers.org/releases/OpenLayers-2.13.1/theme/default/style.css" type="text/css">
+    <link rel="stylesheet" href="http://dev.openlayers.org/releases/OpenLayers-2.13.1/examples/style.css" type="text/css">
+    <script src="http://dev.openlayers.org/releases/OpenLayers-2.13.1/OpenLayers.js"></script>
+    <style>
+        #map {
+			width: 800px;
+			height: 600px;
+        }
+    </style>    
+	<script type="text/javascript">
+        var lon = -73.960;
+        var lat = 40.780;
+        var zoom = 12;
+        var map, layer;
+
+        function init(){
+            map = new OpenLayers.Map( 'map' );
+            layer = new OpenLayers.Layer.WMS( "OpenLayers WMS",
+                    "http://localhost:8080/geoserver/gwc/service/wms", 
+					{layers: "tiger-ny", format: "image/png"} 
+					);
+            map.addLayer(layer);
+
+            map.setCenter(new OpenLayers.LonLat(lon, lat), zoom);
+            map.addControl( new OpenLayers.Control.LayerSwitcher() );
+        }
+    </script>
+  </head>
+  <body onload="init()">
+    <h1 id="title">GeoWebCache Example</h1>
+    <div id="map" class="smallmap"></div>
+  </body>
+</html>
