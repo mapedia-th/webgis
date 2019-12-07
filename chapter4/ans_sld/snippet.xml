@@ -1,0 +1,13 @@
+<! -- Composing labels from multiple attributes -->
+<Label>
+  <ogc:PropertyName>vill_code</ogc:PropertyName> (<ogc:PropertyName>vill_nam_t</ogc:PropertyName>)
+</Label>
+
+<Label>
+  <ogc:PropertyName>vill_code</ogc:PropertyName><![CDATA[
+]]>(<ogc:PropertyName>vill_nam_t</ogc:PropertyName>)
+</Label>
+
+<Label>
+  <ogc:PropertyName>vill_nam_t</ogc:PropertyName> (ชื่อหมู่บ้าน)
+</Label>
